@@ -4,7 +4,11 @@ ARCH LINUX 2019.06.01 Installation Guide
 Follow Guide Shown:
 https://wiki.archlinux.org/index.php/Installation_guide
 
-Missing steps or steps I followed will be divided between the two documents:
+Missing steps or steps I followed will be divided between the two documents. For further details what you're doing refer to the guide above or the install.txt document included with each arch linux iso. From within the live arch linux environment can access install.txt with:
+```
+nano install.txt
+```
+
 
 Start:
 ---------------------
