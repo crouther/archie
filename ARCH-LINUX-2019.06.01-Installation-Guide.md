@@ -84,7 +84,7 @@ Create the hosts file:
 /etc/hosts  
 
 	127.0.0.1	localhost  
-	::1			localhost  
+	::1		localhost  
 	127.0.1.1	myhostname.localdomain	myhostname 
 
 copy & paste text above into -  
@@ -135,8 +135,8 @@ copy & paste text above into -
 	pacman -S xorg  xorg-server  xorg-apps  
 
 	sudo pacman -S gnome  
-
-	sudo systemctl start gdm.service	#optional line if you'd like to start gnome (your GUI desktop environment)
+	#optional line if you'd like to start gnome (your GUI desktop environment)  
+	sudo systemctl start gdm.service  
 
 ```
 
@@ -164,6 +164,6 @@ all done:
 	start miner with:  
 	https://github.com/ethereum-mining/ethminer/blob/master/docs/POOL_EXAMPLES_ETH.md  
 ```
-	Example:  
+example:  
 	ethminer -G -P stratum2+tcp://BTC_WALLET.WORKERNAME@daggerhashimoto.br.nicehash.com:3353  
 ```
