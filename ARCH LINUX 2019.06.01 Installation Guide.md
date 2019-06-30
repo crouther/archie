@@ -9,137 +9,137 @@ Missing steps or steps I followed will be divided between the two documents:
 Start:
 ---------------------
 
-##Confirm and Adjust Network Settings: \ 
-	ip link \ 
-	ping archlinux.org \ 
+##Confirm and Adjust Network Settings:  
+	ip link  
+	ping archlinux.org  
 
-##Time & Date: \ 
-	timedatectl set-ntp true \ 
+##Time & Date:  
+	timedatectl set-ntp true  
 
-##Adjust and Partition Drives:
-	fdisk -l
+##Adjust and Partition Drives:  
+	fdisk -l  
 
-	parted /dev/sda
+	parted /dev/sda  
 
-	mklabel  msdos
-	mkpart  primary  ext4  0%  100%
-	set 1 boot on
-	print
-	quit
-
-
-##Format Partitions:
-	mkfs.ext4 /dev/sda1
-
-##Mount Partitions:
-	mount  /dev/sda1  /mnt
+	mklabel  msdos  
+	mkpart  primary  ext4  0%  100%  
+	set 1 boot on  
+	print  
+	quit  
 
 
-##Install Base Arch System:
-	pacstrap /mnt base base-devel
+##Format Partitions:  
+	mkfs.ext4 /dev/sda1  
 
-##Generate Filesystem Table:
-	enfstab -U /mnt >> /mnt/etc/fstab
-
-##Move work to Mount:
-	arch-chroot /mnt
-
-	(exit?) exit
+##Mount Partitions:  
+	mount  /dev/sda1  /mnt  
 
 
-##Set Region:
-	ln  -sf  /usr/share/zoneinfo/America/New_York  /etc/localtime
+##Install Base Arch System:  
+	pacstrap /mnt base base-devel  
 
-##Set Hardware System Clock:
-	hwclock --systohc
+##Generate Filesystem Table:  
+	enfstab -U /mnt >> /mnt/etc/fstab  
 
-##Language Preference
-	locale-gen #uncomment country language of preference
+##Move work to Mount:  
+	arch-chroot /mnt  
 
-##Network configuration
-	Create the hostname file:
-
-	/etc/hostname
-	myhostname
-	Add matching entries to hosts(5):
-
-		#nano /etc/hostname
-		add name to file
-		save file
+	exit (exit?)  
 
 
-	/etc/hosts
-	{
-		127.0.0.1	localhost
-		::1			localhost
-		127.0.1.1	myhostname.localdomain	myhostname
-	}
+##Set Region:  
+	ln  -sf  /usr/share/zoneinfo/America/New_York  /etc/localtime  
 
-		{} copy & paste above into - 
-		#  nano /etc/hosts
+##Set Hardware System Clock:  
+	hwclock --systohc  
 
+##Language Preference  
+	locale-gen #uncomment country language of preference  
 
-##Initramfs:
-	mkinitcpio -p linux
+##Network configuration  
+	Create the hostname file:  
 
-##Insure Internet Services begin at startup:
-	systemctl enable dhcpcd.service
+	/etc/hostname  
+	myhostname  
+	Add matching entries to hosts(5):  
 
-
-##Bootloader:
-	pacman -S intel-ucode
-	pacman -S grub
-	grub-install --target=i386-pc /dev/sda
-	grub-mkconfig -o /boot/grub/grub.cfg    
-
-##Root Password:
-	passwd
+		#nano /etc/hostname  
+		add name to file  
+		save file  
 
 
-##Create Additional Users:
-	useradd -m -g users -s /bin/bash archie
-	passwd archie
+	/etc/hosts  
+	{  
+		127.0.0.1	localhost  
+		::1			localhost  
+		127.0.1.1	myhostname.localdomain	myhostname  
+	}  
+
+		{} copy & paste above into -   
+		#  nano /etc/hosts  
 
 
-##Add Temporary Permissions:
-	pacman -S sudo
+##Initramfs:  
+	mkinitcpio -p linux  
+
+##Insure Internet Services begin at startup:  
+	systemctl enable dhcpcd.service  
+
+
+##Bootloader:  
+	pacman -S intel-ucode  
+	pacman -S grub  
+	grub-install --target=i386-pc /dev/sda  
+	grub-mkconfig -o /boot/grub/grub.cfg      
+
+##Root Password:  
+	passwd  
+
+
+##Create Additional Users:  
+	useradd -m -g users -s /bin/bash archie  
+	passwd archie  
+
+
+##Add Temporary Permissions:  
+	pacman -S sudo  
 
 
 
-##Funzies installing a desktop environment:
+##Funzies installing a desktop environment:  
 
-	pacman -S net-tools pkgfile base-devel
+	pacman -S net-tools pkgfile base-devel  
 
 
 # first, install Xorg
-	pacman -S xorg  xorg-server  xorg-apps
+	pacman -S xorg  xorg-server  xorg-apps  
 
-	sudo pacman -S gnome
+	sudo pacman -S gnome  
 
-	//sudo systemctl start gdm.service
-
-
-##MINER SOFTWARE AND HARDWARE DRIVERS (VARIES BASED ON COMPONENTS)
-	git clone https://aur.archlinux.org/ethminer.git
-	cd #INTOPACKAGE
-	makepkg -sri
+	//sudo systemctl start gdm.service  
 
 
-install correct drivers for graphics cards by following these steps:
-https://wiki.archlinux.org/index.php/Xorg#AMD
-
-example: 
-	pacman -S xf86-video-amdgpu
-
-
-git clone https://aur.archlinux.org/opencl-amd.git
-	cd #INTOPACKAGE
-	makepkg -sri
+##MINER SOFTWARE AND HARDWARE DRIVERS (VARIES BASED ON COMPONENTS)  
+	git clone https://aur.archlinux.org/ethminer.git  
+	cd #INTOPACKAGE  
+	makepkg -sri  
 
 
-all done:
-	start miner with:
-	https://github.com/ethereum-mining/ethminer/blob/master/docs/POOL_EXAMPLES_ETH.md
+install correct drivers for graphics cards by following these steps:  
+https://wiki.archlinux.org/index.php/Xorg#AMD  
 
-	Example:
-	-P stratum2+tcp://BTC_WALLET.WORKERNAME@daggerhashimoto.br.nicehash.com:3353
+example:   
+	pacman -S xf86-video-amdgpu  
+
+
+git clone https://aur.archlinux.org/opencl-amd.git  
+	cd #INTOPACKAGE  
+	makepkg -sri  
+
+
+all done:  
+	start miner with:  
+	https://github.com/ethereum-mining/ethminer/blob/master/docs/POOL_EXAMPLES_ETH.md  
+
+	Example:  
+	-P stratum2+tcp://BTC_WALLET.WORKERNAME@daggerhashimoto.br.nicehash.com:3353  
