@@ -70,30 +70,26 @@ Start:
 
 Create the hostname file:
 /etc/hostname  
-myhostname  
+	
+	myhostname  
+
 Add matching entries to hosts(5):
 
-	```
-	#nano /etc/hostname  
-	```
+	nano /etc/hostname  
 
-	add your "myhostname" to first line of file  
-	save file  
+add your "myhostname" to first line of file  
+save file  
 
 Create the hosts file:
 /etc/hosts  
 
-	```
 	127.0.0.1	localhost  
 	::1			localhost  
 	127.0.1.1	myhostname.localdomain	myhostname 
-	```
 
-	copy & paste text within {} into -  
-
-	```
-	#  nano /etc/hosts  
-	```
+copy & paste text above into -  
+	
+	nano /etc/hosts  
 
 ### Initramfs:  
 ```
