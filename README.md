@@ -1,6 +1,6 @@
 # archie
 Background:  
-Miner, trader and technical advisor. Specializing in initial coin offers, short and long term investments, portfolio building and currency exchange applications.
+Miner, trader and technical advisor. Specializing in initial coin offers, short and long term investments, portfolio building and currency exchange applications. [-Learn More](https://myles.works)
 
 Purpose:  
 I got bored and wrote myself a script and tutorial for arch linux builds so I wouldn't forget the incremental steps or have to scour the internet for stackoverflow answers to common problems.  
