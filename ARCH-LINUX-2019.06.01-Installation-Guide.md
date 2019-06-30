@@ -122,12 +122,12 @@ Start:
 ```
 
 
-##Funzies installing a desktop environment:  
+# Funzies installing a desktop environment:  
 ```
 	pacman -S net-tools pkgfile base-devel  
 ```
 
-# first, install Xorg
+##first, install Xorg
 ```
 	pacman -S xorg  xorg-server  xorg-apps  
 
