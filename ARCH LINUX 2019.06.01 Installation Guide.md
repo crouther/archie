@@ -9,14 +9,14 @@ Missing steps or steps I followed will be divided between the two documents:
 Start:
 ---------------------
 
-###Confirm and Adjust Network Settings:
-	ip link
-	ping archlinux.org
+##Confirm and Adjust Network Settings: \ 
+	ip link \ 
+	ping archlinux.org \ 
 
-###Time & Date:
-	timedatectl set-ntp true
+##Time & Date: \ 
+	timedatectl set-ntp true \ 
 
-###Adjust and Partition Drives:
+##Adjust and Partition Drives:
 	fdisk -l
 
 	parted /dev/sda
@@ -28,35 +28,35 @@ Start:
 	quit
 
 
-###Format Partitions:
+##Format Partitions:
 	mkfs.ext4 /dev/sda1
 
-###Mount Partitions:
+##Mount Partitions:
 	mount  /dev/sda1  /mnt
 
 
-###Install Base Arch System:
+##Install Base Arch System:
 	pacstrap /mnt base base-devel
 
-###Generate Filesystem Table:
+##Generate Filesystem Table:
 	enfstab -U /mnt >> /mnt/etc/fstab
 
-###Move work to Mount:
+##Move work to Mount:
 	arch-chroot /mnt
 
 	(exit?) exit
 
 
-###Set Region:
+##Set Region:
 	ln  -sf  /usr/share/zoneinfo/America/New_York  /etc/localtime
 
-###Set Hardware System Clock:
+##Set Hardware System Clock:
 	hwclock --systohc
 
-###Language Preference
+##Language Preference
 	locale-gen #uncomment country language of preference
 
-###Network configuration
+##Network configuration
 	Create the hostname file:
 
 	/etc/hostname
@@ -79,34 +79,34 @@ Start:
 		#  nano /etc/hosts
 
 
-###Initramfs:
+##Initramfs:
 	mkinitcpio -p linux
 
-###Insure Internet Services begin at startup:
+##Insure Internet Services begin at startup:
 	systemctl enable dhcpcd.service
 
 
-###Bootloader:
+##Bootloader:
 	pacman -S intel-ucode
 	pacman -S grub
 	grub-install --target=i386-pc /dev/sda
 	grub-mkconfig -o /boot/grub/grub.cfg    
 
-###Root Password:
+##Root Password:
 	passwd
 
 
-###Create Additional Users:
+##Create Additional Users:
 	useradd -m -g users -s /bin/bash archie
 	passwd archie
 
 
-###Add Temporary Permissions:
+##Add Temporary Permissions:
 	pacman -S sudo
 
 
 
-###Funzies installing a desktop environment:
+##Funzies installing a desktop environment:
 
 	pacman -S net-tools pkgfile base-devel
 
@@ -119,7 +119,7 @@ Start:
 	//sudo systemctl start gdm.service
 
 
-###MINER SOFTWARE AND HARDWARE DRIVERS (VARIES BASED ON COMPONENTS)
+##MINER SOFTWARE AND HARDWARE DRIVERS (VARIES BASED ON COMPONENTS)
 	git clone https://aur.archlinux.org/ethminer.git
 	cd #INTOPACKAGE
 	makepkg -sri
