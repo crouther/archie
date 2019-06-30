@@ -67,27 +67,33 @@ Start:
 	locale-gen #uncomment country language of preference  
 ```
 ### Network configuration:
-	Create the hostname file:  
-```
+	
+	Create the hostname file:
 	/etc/hostname  
 	myhostname  
-	Add matching entries to hosts(5):  
-
+	Add matching entries to hosts(5):
+	
+		```
 		#nano /etc/hostname  
-		add name to file  
+		```
+		
+		add your "myhostname" to first line of file  
 		save file  
 
-
+	Create the hosts file:
 	/etc/hosts  
-	{  
+	
+		```
 		127.0.0.1	localhost  
 		::1			localhost  
-		127.0.1.1	myhostname.localdomain	myhostname  
-	}  
-
-		{} copy & paste above into -   
+		127.0.1.1	myhostname.localdomain	myhostname 
+		```
+		
+		copy & paste text within {} into -  
+		
+		```
 		#  nano /etc/hosts  
-```
+		```
 
 ### Initramfs:  
 ```
@@ -134,7 +140,7 @@ Start:
 
 	sudo pacman -S gnome  
 
-	//sudo systemctl start gdm.service  
+	sudo systemctl start gdm.service	#optional line if you'd like to start gnome (your GUI desktop environment)
 
 ```
 
