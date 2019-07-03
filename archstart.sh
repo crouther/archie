@@ -1,6 +1,11 @@
-#ARCH LINUX 2019.06.01 Installation Guide
+# ARCH LINUX 2019.06.01 Installation Guide
+#
+# WARNING: This script is a template, mild modifications may be
+#	   required at launch or pre-execution based on,
+#	   networking, file system, storage, and application needs.
+#
 #Follow Guide Shown:
-#https://wiki.archlinux.org/index.php/Installation_guide
+#	https://wiki.archlinux.org/index.php/Installation_guide
 
 #!/bin/bash
 
