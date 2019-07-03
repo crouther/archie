@@ -114,7 +114,6 @@ I#nsure Internet Services begin at startup:
 
 # first, install Xorg
 	pacman -S xorg  xorg-server  xorg-apps
-
 	sudo pacman -S gnome
 
 #	//sudo systemctl start gdm.service
