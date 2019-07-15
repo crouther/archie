@@ -1,6 +1,6 @@
 # archie
 Background:  
-Miner, trader and technical advisor. Specializing in initial coin offers, short and long term investments, portfolio building and currency exchange applications. [- Learn More](https://myles.works)
+Miner, trader and technical advisor. Specializing in initial coin offers, short and long term investments, portfolio building and currency exchange applications. [- Learn More](https://myles.works/on/crypto)
 
 
 Purpose:  
