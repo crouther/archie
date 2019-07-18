@@ -144,7 +144,7 @@ copy & paste text above into -
 
 ```
 
-## Additioanl Applications:  
+## Additional Applications:  
 ### MINER SOFTWARE AND HARDWARE DRIVERS (VARIES BASED ON COMPONENTS)  
 ```
 	git clone https://aur.archlinux.org/ethminer.git  
@@ -171,3 +171,7 @@ all done:
 example:  
 	ethminer -G -P stratum2+tcp://BTC_WALLET.WORKERNAME@daggerhashimoto.br.nicehash.com:3353  
 ```
+
+### MANAGE SYSTEM WITH SSH:
+https://github.com/crouther/archie/blob/master/motd
+https://securitytrails.com/blog/mitigating-ssh-based-attacks-top-15-best-security-practices
