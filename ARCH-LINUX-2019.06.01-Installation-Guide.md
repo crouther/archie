@@ -173,5 +173,5 @@ example:
 ```
 
 ### MANAGE SYSTEM WITH SSH:
-https://github.com/crouther/archie/blob/master/motd
-https://securitytrails.com/blog/mitigating-ssh-based-attacks-top-15-best-security-practices
+https://github.com/crouther/archie/blob/master/motd    
+https://securitytrails.com/blog/mitigating-ssh-based-attacks-top-15-best-security-practices  
