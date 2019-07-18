@@ -1,4 +1,16 @@
-# archie
+ ▄▄▄       ██▀███   ▄████▄   ██░ ██  ██▓▓█████ 
+▒████▄    ▓██ ▒ ██▒▒██▀ ▀█  ▓██░ ██▒▓██▒▓█   ▀ 
+▒██  ▀█▄  ▓██ ░▄█ ▒▒▓█    ▄ ▒██▀▀██░▒██▒▒███   
+░██▄▄▄▄██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒░▓█ ░██ ░██░▒▓█  ▄ 
+ ▓█   ▓██▒░██▓ ▒██▒▒ ▓███▀ ░░▓█▒░██▓░██░░▒████▒
+ ▒▒   ▓▒█░░ ▒▓ ░▒▓░░ ░▒ ▒  ░ ▒ ░░▒░▒░▓  ░░ ▒░ ░
+  ▒   ▒▒ ░  ░▒ ░ ▒░  ░  ▒    ▒ ░▒░ ░ ▒ ░ ░ ░  ░
+  ░   ▒     ░░   ░ ░         ░  ░░ ░ ▒ ░   ░   
+      ░  ░   ░     ░ ░       ░  ░  ░ ░     ░  ░
+                   ░                           
+                                               
+Author: @2MylesAway                                                                                          
+
 Background:  
 Miner, trader and technical advisor. Specializing in initial coin offers, short and long term investments, portfolio building and currency exchange applications. [- Learn More](https://myles.works/on/crypto)
 
