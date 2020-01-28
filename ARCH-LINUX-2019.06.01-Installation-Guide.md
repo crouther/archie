@@ -145,6 +145,13 @@ copy & paste text above into -
 ```
 
 ## Additional Applications:  
+AUR package security keys
+```
+	pacman -S archlinux-keyring
+```
+
+
+
 ### MINER SOFTWARE AND HARDWARE DRIVERS (VARIES BASED ON COMPONENTS)  
 ```
 	git clone https://aur.archlinux.org/ethminer.git  
