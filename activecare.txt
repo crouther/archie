@@ -19,8 +19,10 @@ Investigate():
 
 Email():
 
-	//Send email confirmation command
-	Confirmation notice yes / no (details found)
+	for each item in found address (list / array )
+
+		//Send email confirmation command
+		Confirmation notice yes / no (details found)
 
 
 Build():
@@ -46,6 +48,9 @@ Find():
 
 	For each item in foundArray
 		Email(item)
+
+	returns:
+		list / array - found addresses
 
 
 Search():
