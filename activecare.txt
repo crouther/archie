@@ -1,0 +1,62 @@
+///program 
+
+
+/** REVIEW CLI Programs
+		getmail
+		sendmail
+		./query
+**/
+
+
+Investigate(): 
+
+	returns:
+		year beach password
+
+
+Email():
+
+	//Send email confirmation command
+	Confirmation notice yes / no (details found)
+
+
+Build():
+
+	parameters:
+		.csv
+
+	returns:
+		list / array - Emails
+
+
+Find():
+
+	variables:
+		list / array - Emails
+		list / array - found address
+
+	For each item in emailArray
+		Search(Emails)
+
+		if email is found
+        	Add email to found array
+
+	For each item in foundArray
+		Email(item)
+
+
+Search():
+
+	parameters:
+		string email
+
+	Function:
+		query(email) //command
+		//Command output to file
+		//Files stored as email.txt
+
+		If command log file is not empty
+			Email found
+
+		returns:
+			Boolean - email is found 
