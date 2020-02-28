@@ -1,20 +1,32 @@
-///program 
+/*******************************************************************************
+***
+**
+*	AuthSecured
+*
+*	An Automated Account Authentication Service for comparing user request to a
+*	database of known vulnerable accounts. Compromised passwords from various
+*	breaches not currently shared, only verification of their privacy violation 
+*
+* REVIEW CLI Commands
+*	getmail
+*	mail
+*	./query.sh
+*
+*
+* FUTURE FEATURE:
+*
+*	Investigate(): 
+*
+*		returns:
+*			year beach password
+**
+***
+*******************************************************************************/
 
 
-/** REVIEW CLI Programs
-		getmail
-		sendmail
-		./query
-
-
-FUTURE FEATURE:
-
-Investigate(): 
-
-	returns:
-		year beach password
-
-**/
+variables:
+	list / array - Emails - Build()
+	list / array - found address
 
 
 Email():
@@ -36,10 +48,6 @@ Build():
 
 Find():
 
-	variables:
-		list / array - Emails - Build()
-		list / array - found address
-
 	For each item in emailArray
 		Search(Emails)
 
@@ -59,9 +67,7 @@ Search():
 		string email
 
 	Function:
-		query(email) //command
-		//Command output to file
-		//Files stored as email.txt
+		query(email) //command & outputs to file [ie. adr-3555.txt]
 
 		If command log file is not empty
 			Email found
