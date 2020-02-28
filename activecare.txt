@@ -5,13 +5,16 @@
 		getmail
 		sendmail
 		./query
-**/
 
+
+FUTURE FEATURE:
 
 Investigate(): 
 
 	returns:
 		year beach password
+
+**/
 
 
 Email():
@@ -32,7 +35,7 @@ Build():
 Find():
 
 	variables:
-		list / array - Emails
+		list / array - Emails - Build()
 		list / array - found address
 
 	For each item in emailArray
