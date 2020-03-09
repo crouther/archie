@@ -1,6 +1,6 @@
-
 ARCH LINUX Mail Server Guide
 =============================
+
 
 Start with Guide Shown:
 https://wiki.archlinux.org/index.php/Backup_Gmail_with_getmail
@@ -67,21 +67,17 @@ save and close file
 
 ### Run Retrieval at Select Intervals
 
-[Example](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/)
 ```
 	export VISUAL=nano; crontab -e
 ```
 
+
+[Example](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/)
 ```
 * * * * *   ID=getmail FREQ=1d getmail -q
 ```
 
-
 [Every 10 Minutes](https://crontab.guru/every-10-minutes)
-```
-	export VISUAL=nano; crontab -e
-```
-
 ```
 */10 * * * *   ID=getmail FREQ=1d getmail -q
 ```
@@ -103,8 +99,7 @@ save and close file
 
 #### Additional Resources:
 
-[List of Various Commands](https://www.tecmint.com/send-email-attachment-from-linux-commandline/)
-
+[List of Various Commands](https://www.tecmint.com/send-email-attachment-from-linux-commandline/)  
 [*user perference* mail command](https://wiki.archlinux.org/index.php/Msmtp#Using_the_mail_command)
 
 
